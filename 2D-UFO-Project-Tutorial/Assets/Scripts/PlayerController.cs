@@ -34,9 +34,20 @@ public class PlayerController : MonoBehaviour {
         // Actual interaction with the physics engine.
         Vector2 ForceVector = new Vector2(MoveHorizontal, MoveVertical) * ForceMagnitude;
         Rb2dReference.AddForce(ForceVector);
+
+
         
 	}
 
-	
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        
+    }
+
+
 }
 
