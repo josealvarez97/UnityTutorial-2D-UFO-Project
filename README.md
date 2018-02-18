@@ -1,8 +1,6 @@
 # UnityTutorial-2D-UFO-Project
-2D UFO Game developed based on the official tutorials from the Unity documentation. Link: https://unity3d.com/learn/tutorials/s/2d-ufo-tutorial
 
 
+# Disclaimer:
 
-
-This link may help in the future... https://issuetracker.unity3d.com/issues/unity-package-manager-freezes-on-starting-server-when-proxy-is-enabled.
-Update for above's note... This seems to be a solution: https://forum.unity.com/threads/solved-package-manager-including-missing-packages-that-break-automated-builds.508502/#post-3350243. Preferred to install the 2018.8 beta version though
+Up to [this commit](https://github.com/josealvarez97/UnityTutorial-2D-UFO-Project/commit/4a0c20e12797b0c291e0256857b619d56ea08d78) (see description), the 2D UFO Game was developed based on the [official tutorials from the Unity documentation](https://unity3d.com/learn/tutorials/s/2d-ufo-tutorial). ***After** such commit, any addition represents input of **my own creativity and authorship.*** I must say that I'm definitely grateful with Unity technologies for making such great tutorials. However, again, from now on the evolution of this project will be my original input.
