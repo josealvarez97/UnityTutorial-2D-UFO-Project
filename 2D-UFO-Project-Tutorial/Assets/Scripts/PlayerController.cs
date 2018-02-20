@@ -77,6 +77,10 @@ public class PlayerController : MonoBehaviour {
         // Actual interaction with the physics engine.
         if (horizontalVector != 0 || verticalVector !=0)
         {
+            // Force them to have a magnitude of one by dividing them by themselves.
+            horizontalVector = horizontalVector / Mathf.Abs(horizontalVector);
+            verticalVector = verticalVector / Mathf.Abs(verticalVector);
+
             Vector2 forceVector = new Vector2(horizontalVector, verticalVector) * forceMagnitude;
             rb2dReference.AddForce(forceVector);
         }
