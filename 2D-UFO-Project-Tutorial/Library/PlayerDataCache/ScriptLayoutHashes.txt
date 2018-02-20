@@ -1,6 +1,6 @@
-WindowsStandalone
+Android
 PlayerPath?
-D:/Github/UnityTutorial-2D-UFO-Project/2D-UFO-Project-Tutorial/TutorialBasedBuilds/CompletedTutorialVersion/UFOGame-CompletedBasedOnTutorialVersion.exe
+D:/Github/UnityTutorial-2D-UFO-Project/2D-UFO-Project-Tutorial/OriginalBuilds/AndroidBuilds/SecondAndroidBuild
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
