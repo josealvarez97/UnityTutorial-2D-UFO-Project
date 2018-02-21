@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-D:/Github/UnityTutorial-2D-UFO-Project/2D-UFO-Project-Tutorial/OriginalBuilds/AndroidBuilds/5. Build with Accelerometer Input/BuildWithAccelerometerInput.apk
+D:/Github/UnityTutorial-2D-UFO-Project/2D-UFO-Project-Tutorial/OriginalBuilds/AndroidBuilds/6. Implemented Pinch To Zoom Interaction/PinchToZoomInteraction.apk
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -117,7 +117,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 ade846c4714f980fafbd62495f9e44ca Assembly-CSharp.dll:.PlayerController
-75bc4e4dcd4f0c230c571cb287c4e16b Assembly-CSharp.dll:.CameraController
+adf5066024632d2d1f4c5b5b57c62ab3 Assembly-CSharp.dll:.CameraController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -148,3 +148,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 24ac7fa068cd1cd6a9b4b7f6868043b6 Assembly-CSharp.dll:.TutorialInfo
 2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.CompleteCameraController
+92897628d081290e9296d672e9dbb609 Assembly-CSharp.dll:.PinchToZoom
