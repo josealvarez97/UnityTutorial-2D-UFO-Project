@@ -49,46 +49,57 @@ public class PlayerController : MonoBehaviour {
 	{
         // Unity documentations seems to be pretty good...
         // This input will be used for applying forces to the rigid body
-        float moveHorizontal = Input.GetAxis("Horizontal"); // InputManager does a great job recording automatically from the keys at the keybord. 
-		float moveVertical = Input.GetAxis("Vertical");
+        //float moveHorizontal = Input.GetAxis("Horizontal"); // InputManager does a great job recording automatically from the keys at the keybord. 
+		//float moveVertical = Input.GetAxis("Vertical");
         //Input.acceleration;
         //Input.deviceOrientation;
         //Input.accelerationEvents;
 
         // FOR MOBILE
-        Touch[] myTouches = Input.touches;
-        float horizontalVector = 0;
-        float verticalVector = 0;
 
-        for (int i = 0; i < Input.touchCount; i++)
-        {
-            Touch myTouch = Input.GetTouch(i);
-            Vector2 touchPosition = myTouch.position;
+        // TOUCHSCREEN INPUT
+        //Touch[] myTouches = Input.touches;
+        //float horizontalVector = 0;
+        //float verticalVector = 0;
 
-            Vector2 origin = new Vector2(Screen.width / 2, Screen.height / 2);
+        //for (int i = 0; i < Input.touchCount; i++)
+        //{
+        //    Touch myTouch = Input.GetTouch(i);
+        //    Vector2 touchPosition = myTouch.position;
 
-            horizontalVector = touchPosition.x - origin.x;
-            verticalVector = touchPosition.y - origin.y;
-            
-        }
-        
+        //    Vector2 origin = new Vector2(Screen.width / 2, Screen.height / 2);
+
+        //    horizontalVector = touchPosition.x - origin.x;
+        //    verticalVector = touchPosition.y - origin.y;
+
+        //}
 
 
-        // Actual interaction with the physics engine.
-        if (horizontalVector != 0 || verticalVector !=0)
-        {
-            // Force them to have a magnitude of one by dividing them by themselves.
-            horizontalVector = horizontalVector / Mathf.Abs(horizontalVector);
-            verticalVector = verticalVector / Mathf.Abs(verticalVector);
 
-            Vector2 forceVector = new Vector2(horizontalVector, verticalVector) * forceMagnitude;
-            rb2dReference.AddForce(forceVector);
-        }
-        else
-        {
-            Vector2 forceVector = new Vector2(moveHorizontal, moveVertical) * forceMagnitude;
-            rb2dReference.AddForce(forceVector);
-        }
+        //// Actual interaction with the physics engine.
+        //if (horizontalVector != 0 || verticalVector !=0)
+        //{
+        //    // Force them to have a magnitude of one by dividing them by themselves.
+        //    horizontalVector = horizontalVector / Mathf.Abs(horizontalVector);
+        //    verticalVector = verticalVector / Mathf.Abs(verticalVector);
+
+        //    Vector2 forceVector = new Vector2(horizontalVector, verticalVector) * forceMagnitude;
+        //    rb2dReference.AddForce(forceVector);
+        //}
+        //else
+        //{
+        //    Vector2 forceVector = new Vector2(moveHorizontal, moveVertical) * forceMagnitude;
+        //    rb2dReference.AddForce(forceVector);
+        //}
+
+
+        // ACCELEROEMTER INPUT
+
+        float horizontalVector = Input.acceleration.x;
+        float verticalVector = Input.acceleration.y;
+
+        Vector2 forceVector = new Vector2(horizontalVector, verticalVector) * (forceMagnitude * 3);
+        rb2dReference.AddForce(forceVector);
         
 
         UpdateUITime();
